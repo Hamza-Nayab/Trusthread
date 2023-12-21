@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:3000/api/users",
+  baseURL: "https://trusthread.vercel.app/api/users",
 });
 
 API.interceptors.request.use((req) => {
