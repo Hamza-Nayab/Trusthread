@@ -10,7 +10,7 @@ const Protected = ({ children, allowedStatus, currentUser }) => {
     return (<>
       
       <Navigate
-        to={`/authfailed?message=You are not allowed for this route. Please log in as one of the allowed statuses`}
+        to={`/authfailed?message=You are not allowed for this route. Please log in as one of the allowed status`}
         replace
       />
       
