@@ -26,7 +26,7 @@ function Signin() {
     ReactDOM.render(
       <GoogleLogin
         clientId="379823781838-man1sej41dpcjc477aahh487avon688t.apps.googleusercontent.com"
-        buttonText="Login With Google"
+        buttonText="Wanna Google?"
         onSuccess={googleSuccess}
         onFailure={responseGoogle}
         cookiePolicy={"single_host_origin"}
@@ -179,9 +179,10 @@ function Signin() {
           <button className="btn btn-dark" type="button" onClick={toggleForm}>
             <span style={{ color: '#FFDE59' }}>{isRegistration ? 'Back to Sign In' : 'Register'}</span>
           </button>
+          <div id="signInDiv" style={{marginLeft:"130px",marginTop:"20px"}}></div>
         </div>
       </form>
-      <div id="signInDiv"></div>
+     
     </div>
   );
 }
