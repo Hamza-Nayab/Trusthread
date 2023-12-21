@@ -31,7 +31,9 @@ app.use(express.json());
 app.use('/api/users', userRoutes);
 app.use('/api', reviewRoutes);
 app.use('/api/images', reviewRoutes);
-
+app.get("/",(req,res)=>{
+  res.send("Running!");
+})
 
 
 // Routes
