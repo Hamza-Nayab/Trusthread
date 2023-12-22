@@ -5,6 +5,7 @@ const UserController = {
   // Register a new user
   async register(req, res) {
     try {
+      console.log("CALLLLLLLL");
       const { fullName, email, password, status } = req.body;
 
       const existingUser = await User.findOne({ email });
@@ -31,13 +32,11 @@ const UserController = {
         "secret"
       );
 
-      return res
-        .status(201)
-        .json({
-          message: "User registered successfully",
-          user: newUser,
-          token: token,
-        });
+      return res.status(201).json({
+        message: "User registered successfully",
+        user: newUser,
+        token: token,
+      });
     } catch (error) {
       return res
         .status(500)

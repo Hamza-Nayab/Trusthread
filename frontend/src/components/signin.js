@@ -26,7 +26,7 @@ function Signin() {
     ReactDOM.render(
       <GoogleLogin
         clientId="379823781838-man1sej41dpcjc477aahh487avon688t.apps.googleusercontent.com"
-        buttonText="Wanna Google?"
+        buttonText="Wanna Google"
         onSuccess={googleSuccess}
         onFailure={responseGoogle}
         cookiePolicy={"single_host_origin"}
