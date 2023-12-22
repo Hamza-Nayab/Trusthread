@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://trusthread.vercel.app';
 
 const reviewsAPI = {
 
@@ -19,7 +19,7 @@ const reviewsAPI = {
 
   console.log(userData);
   formData.append('userId', userData._id);
-  formData.append('username', userData.fullName);
+ // formData.append('username', userData.fullName);
   
   await Promise.all(promises);
 
