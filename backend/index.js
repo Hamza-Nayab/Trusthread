@@ -23,7 +23,7 @@ mongoose.connect(url, {
 .catch((err) => {
   console.error('Error connecting to MongoDB:', err.message);
 });
-app.use(cors());
+
 // Middleware
 app.use(express.json());
 // Add other middleware as needed

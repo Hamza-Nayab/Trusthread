@@ -16,7 +16,7 @@ router.post('/register', upload.single('profileImage'), UserController.register)
 router.post('/login', UserController.login);
 
 // Get user profile
-router.get('/:userId',auth, UserController.getUserProfile);
+router.get('/:userId', auth,UserController.getUserProfile);
 
 // Update user profile
 router.put('/:userId',auth ,UserController.updateUserProfile);
@@ -29,7 +29,7 @@ router.get('/', UserController.getAllUsers);
 
 router.get('/user_seller', UserController.getAllSellers);
 
-router.put('/seller/:id', auth,UserController.updateUser);
+router.put('/seller/:id',UserController.updateUser);
 
 
 

@@ -102,7 +102,7 @@ function Navbar() {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    {user.fullName} {/* Display username */}
+                    {(user.fullName)?user.fullName:user.given_name} {/* Display username */}
                   </span>
                   <ul
                     className="dropdown-menu"

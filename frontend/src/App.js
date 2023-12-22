@@ -139,12 +139,9 @@ function App() {
           <Route
             path="/list"
             element={
-              <Protected
-                allowedStatus={["Buyer", "Seller", "Admin"]}
-                currentUser={currentUser.status}
-              >
+              
                 <Listseller />
-              </Protected>
+             
             }
           />
           <Route
