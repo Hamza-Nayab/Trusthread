@@ -55,7 +55,7 @@ function Sidebar(props) {
             style={{ textDecoration: "none" }}
           >
             <Link to="/edit">
-              <span style={{ color: "white" }}>Edit Description</span>
+              <span style={{ color: "#FFDE59" }}>Edit Description</span>
             </Link>
           </button>
         </div>
