@@ -80,7 +80,7 @@ function AdminReviews() {
                       {review.images.map((image, index) => (
                         <img
                           key={index}
-                          src={`https://trusthread.vercel.app/api/images/${image
+                          src={`http://localhost:3000/api/images/${image
                             .split("\\")
                             .pop()}`}
                           alt={`Image ${index}`}

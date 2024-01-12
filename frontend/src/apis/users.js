@@ -1,15 +1,14 @@
-
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://trusthread.vercel.app/api/users",
+  baseURL: "http://localhost:3000/api/users",
 });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("token")) {
-    req.headers.Authorization = `Bearer ${
-      JSON.parse(localStorage.getItem("token"))
-    }`;
+    req.headers.Authorization = `Bearer ${JSON.parse(
+      localStorage.getItem("token")
+    )}`;
   }
   return req;
 });
@@ -43,12 +42,11 @@ const usersAPI = {
       throw error.response.data;
     }
   },
-   updateUser : async (userData) => {
+  updateUser: async (userData) => {
     try {
       const response = await API.put(`/seller/${userData._id}`, userData);
       console.log("bjcdbjdc");
       return response.data;
-
     } catch (error) {
       throw new Error(`Failed to update user: ${error.message}`);
     }
@@ -63,32 +61,32 @@ const usersAPI = {
     }
   },
 
-    deleteUser: async (userId) => {
-        try {
-          const response = await API.delete(`/${userId}`);
-          return response.data;
-        } catch (error) {
-          throw error.response.data;
-        }
-      },
-    
-      getAllUsers: async () => {
-        try {
-          const response = await API.get(``);
-          return response.data;
-        } catch (error) {
-          throw error.response.data;
-        }
-      },
-      getAllSellers: async () => {
-        try {
-          const response = await API.get(`/user_seller`);
-          return response.data;
-        } catch (error) {
-          throw error.response.data;
-        }
-      },
+  deleteUser: async (userId) => {
+    try {
+      const response = await API.delete(`/${userId}`);
+      return response.data;
+    } catch (error) {
+      throw error.response.data;
+    }
+  },
+
+  getAllUsers: async () => {
+    try {
+      const response = await API.get(``);
+      return response.data;
+    } catch (error) {
+      throw error.response.data;
+    }
+  },
+  getAllSellers: async () => {
+    try {
+      const response = await API.get(`/user_seller`);
+      return response.data;
+    } catch (error) {
+      throw error.response.data;
+    }
+  },
 };
 
 export default usersAPI;
-export {API};
+export { API };

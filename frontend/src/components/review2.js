@@ -82,7 +82,7 @@ function Review2() {
                           <div className="col-md-6">
                             <div className="card mb-3">
                               <img
-                                src={`https://trusthread.vercel.app/api/users/images/${rev.profilePicture
+                                src={`http://localhost:3000/api/users/images/${rev.profilePicture
                                   ?.split("\\")
                                   .pop()}`}
                                 className="card-img-top"

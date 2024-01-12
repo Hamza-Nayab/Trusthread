@@ -14,7 +14,7 @@ function Adminhome() {
   useEffect(() => {
     const fetchRecentReviews = async () => {
       try {
-        const response = await axios.get("https://trusthread.vercel.app/api/reviews");
+        const response = await axios.get("http://localhost:3000/api/reviews");
         const data = response.data;
         const reviews = data.reviews.filter(
           (rev) => rev.user === currentUser._id

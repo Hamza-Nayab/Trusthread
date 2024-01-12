@@ -322,7 +322,7 @@ function Profile() {
             <div className="col-md-3 mt-1">
               <img
                 className="img-fluid img-responsive rounded product-image"
-                src={`https://trusthread.vercel.app/api/images/${rev.images[0].split('\\').pop()}`}
+                src={`http://localhost:3000/api/images/${rev.images[0].split('\\').pop()}`}
                 alt="Product 1"
               />
             </div>

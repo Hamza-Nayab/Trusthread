@@ -71,7 +71,7 @@ function Listseller() {
                   }}
                 >
                   <img
-               src={`https://trusthread.vercel.app/api/users/images/${seller.profilePicture?.split('\\').pop()}`}
+               src={`http://localhost:3000/api/users/images/${seller.profilePicture?.split('\\').pop()}`}
                                 alt="Avatar"
                     className="img-fluid my-3 rounded"
                     style={{

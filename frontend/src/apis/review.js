@@ -1,9 +1,9 @@
 import axios from "axios";
-const API_URL = 'https://trusthread.vercel.app';
+const API_URL = 'http://localhost:3000';
 
 const reviewsAPI = {
 
- submitReview : async (reviewData, userData) =>{ 
+ submitReview : async (reviewData, userData) => {
   const formData = new FormData();
   formData.append('title', reviewData.title);
   formData.append('description', reviewData.description);
@@ -19,8 +19,8 @@ const reviewsAPI = {
 
   console.log(userData);
   formData.append('userId', userData._id);
- // formData.append('username', userData.fullName);
-  
+  formData.append('username', userData.fullName);
+
   await Promise.all(promises);
 
   try {

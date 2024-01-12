@@ -66,7 +66,7 @@ function AdminUsersPage() {
                   <td>{user.email}</td>
                   <td>{user._id}</td>
                   <img
-                    src={`https://trusthread.vercel.app/api/users/images/${user.profilePicture
+                    src={`http://localhost:3000/api/users/images/${user.profilePicture
                       ?.split("\\")
                       .pop()}`}
                     className="review-image"
